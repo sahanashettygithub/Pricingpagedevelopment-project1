@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #020303fc; /* Light background color for the entire page */
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Plan Styles */
+        .plan {
+            width: 300px;
+            background: linear-gradient(145deg, #b354a0, #d3d8d1);
+            border: 1px solid #ddd;
+            border-radius: 50px; /* Makes the box oval-shaped */
+            padding: 20px;
+            box-shadow: 3px 3px 10px #aaaaaa, -3px -3px 10px #575252; /* 3D effect */
+            transition: transform 0.3s ease;
+        }
+
+        .plan:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 20px #aaaaaa, -5px -5px 20px #ffffff; /* Deeper shadow on hover */
+        }
+
+        .plan h2 {
+            color: #000000;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .plan p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .plan .price {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .plan ul li {
+            font-size: 1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .plan ul li::before {
+            content: '✔'; /* Checkmark for list items */
+            color: #020304;
+            margin-right: 10px;
+        }
+
+        .plan button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #007bff;
+            background-color: #0d0e0f;
+            color: white;
+            border: none;
+            border-radius: 30px; /* Makes the button oval-shaped */
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 5px 5px 15px #aaaaaa, -5px -5px 15px #ffffff; /* 3D effect */
+        }
+
+        .plan button:hover {
+            background-color: #0056b3;
+            box-shadow: 5px 5px 20px #aaaaaa, -5px -5px 20px #ffffff; /* Deeper shadow on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pricing Plans</h1>
+        <p>Choose a plan that suits you best!</p>
+    </header>
+    <div class="container">
+        <div class="plan">
+            <h2>Basic</h2>
+            <p>For individuals</p>
+            <div class="price">$19.99 / month</div>
+            <ul>
+                <li>Access to basic features</li>
+                <li>Email support</li>
+                <li>10GB storage</li>
+                <li>Community access</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+        <div class="plan">
+            <h2>Standard</h2>
+            <p>For small businesses</p>
+            <div class="price">$39.99 / month</div>
+            <ul>
+                <li>All features in Basic</li>
+                <li>Priority email support</li>
+                <li>50GB storage</li>
+                <li>Access to exclusive content</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+        <div class="plan">
+            <h2>Premium</h2>
+            <p>For large enterprises</p>
+            <div class="price">$99.99 / month</div>
+            <ul>
+                <li>All features in Standard</li>
+                <li>24/7 phone support</li>
+                <li>Unlimited storage</li>
+                <li>Dedicated account manager</li>
+            </ul>
+            <button>Select Plan</button>
+        </div>
+    </div>
+    <script>
+      
+    
+        const buttons = document.querySelectorAll('.plan button');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                alert(`You selected the ${button.parentNode.querySelector('h2').innerText} plan!`);
+            });
+        });
+    </script>
+</body>
+</html>
